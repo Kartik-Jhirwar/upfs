@@ -25,7 +25,7 @@ function Header() {
       )}
 
 <ImageListItem sx={{ width: { xs: 100, md: 130 }, height: "auto", mr: 1 }}>
-        <Link to={"/upfs/dashboards"}>
+        <Link to={"/dashboards"}>
         <img
           src={upfsLogo}
           alt="UPFS Logo"

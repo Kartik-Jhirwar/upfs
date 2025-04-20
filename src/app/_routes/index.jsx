@@ -44,5 +44,4 @@ const routes = [
   },
 ];
 
-
-export const router = createBrowserRouter(routes, { basename: "/upfs" });
+export const router = createBrowserRouter(routes);

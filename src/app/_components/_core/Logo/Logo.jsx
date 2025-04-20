@@ -5,7 +5,7 @@ import upfsLogo from "@assets/images/upfsLogo.jpg"
 const Logo = ({ mini = false, mode = "light", sx }) => {
   return (
     <Div sx={{ display: "inline-flex", ...sx }}>
-      <Link to={"/upfs/dashboards"}>
+      <Link to={"/dashboards"}>
         {!mini ? (
           <img
             src={mode === "light" ? upfsLogo : upfsLogo}

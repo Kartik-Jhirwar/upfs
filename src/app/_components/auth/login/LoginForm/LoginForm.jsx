@@ -24,7 +24,7 @@ const LoginForm = () => {
   });
   async function handleLogin() {
     await login({ email: "demo@example.com", password: "zab#723" });
-    return navigate("/upfs/dashboards");
+    return navigate("/dashboards");
   }
   const handleClickShowPassword = () => {
     setValues({
