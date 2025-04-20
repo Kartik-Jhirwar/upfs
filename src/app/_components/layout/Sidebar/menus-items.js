@@ -7,12 +7,12 @@ export function getMenus() {
       label: t("sidebar.menu.sample"),
       children: [
         {
-          path: "/upfs/dashboards",
+          path: "/dashboards",
           label: t("sidebar.menuItem.home"),
           icon: "sample",
         },
         {
-          path: "/upfs/dashboards/fire-complaint",
+          path: "/dashboards/fire-complaint",
           label: t("sidebar.menuItem.sample"),
           icon: "sample",
         },

@@ -1,5 +1,5 @@
 import Login1 from "@app/pages/auth/login1";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import SamplePage from "@app/pages";
 import { StretchedLayout } from "@app/_layouts/StretchedLayout";
 import { SoloLayout } from "@app/_layouts/SoloLayout";
@@ -11,34 +11,38 @@ import FireDashboard from "../Firestation/pages/Home";
 
 const routes = [
   {
-    path: "/",
+    path: '/',
+    element: <Navigate to="/dashboards" replace />,
+  },
+  {
+    path: '/dashboards',
     element: <StretchedLayout />,
     children: [
       {
-        path: "/upfs/dashboards/fire-complaint",
+        path: 'fire-complaint',
         element: <Page Component={FireComplaintForm} hoc={withAuth} />,
       },
       {
-        path: "/upfs/dashboards",
+        path: '',
         element: <Page Component={FireDashboard} hoc={withAuth} />,
       },
     ],
   },
-
   {
-    path: "/auth",
+    path: '/auth',
     element: <SoloLayout />,
     children: [
       {
-        path: "login-1",
+        path: 'login-1',
         element: <Login1 />,
       },
     ],
   },
   {
-    path: "*",
+    path: '*',
     element: <NotFound />,
   },
 ];
 
-export const router = createBrowserRouter(routes);
+
+export const router = createBrowserRouter(routes, { basename: "/upfs" });
