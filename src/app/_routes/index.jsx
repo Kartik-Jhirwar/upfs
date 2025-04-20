@@ -6,8 +6,8 @@ import { SoloLayout } from "@app/_layouts/SoloLayout";
 import { Page } from "@app/_components/_core/Page";
 import withAuth from "@app/_hoc/withAuth";
 import { NotFound } from "@app/_components/_core/NotFound";
-import FireComplaintForm from "../../Firestation/pages/FireForm";
-import FireDashboard from "../../Firestation/pages/Home";
+import FireComplaintForm from "../Firestation/pages/FireForm";
+import FireDashboard from "../Firestation/pages/Home";
 
 const routes = [
   {
