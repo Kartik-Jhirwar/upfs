@@ -172,6 +172,15 @@ export const mainTheme = {
         },
       },
     },
+    MuiCssBaseline: {
+      styleOverrides: `
+        @keyframes pulse {
+          0% { transform: scale(0.95); opacity: 1; }
+          50% { transform: scale(1.05); opacity: 0.7; }
+          100% { transform: scale(0.95); opacity: 1; }
+        }
+      `,
+    },
     MuiCardHeader: {
       styleOverrides: {
         root: {

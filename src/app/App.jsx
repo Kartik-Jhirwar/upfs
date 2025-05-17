@@ -8,9 +8,11 @@ import { Suspense } from "react";
 import Spinner from "./_shared/Spinner";
 import { CssBaseline } from "@mui/material";
 import { AppProvider } from "./_components/AppProvider";
+import { FireDataProvider } from "./Firestation/pages/FireDataContext";
 
 function App() {
   return (
+    <FireDataProvider>
     <AuthProvider>
       <AppProvider>
         <JumboTheme init={CONFIG.THEME}>
@@ -23,6 +25,7 @@ function App() {
         </JumboTheme>
       </AppProvider>
     </AuthProvider>
+    </FireDataProvider>
   );
 }
 
